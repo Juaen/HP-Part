@@ -1,0 +1,3055 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+                
+        <TITLE>Plantilla de garantía de tinta y tóner HP</TITLE>
+
+    <META content="text/html; charset=UTF-8" http-equiv=Content-Type>
+
+    <style>
+        
+    
+    p {
+    
+        font-family: Arial, sans-serif;
+    
+            font-size: .8em;
+    
+    }
+    
+     
+    
+    p.footnote {
+    
+        font-family: Arial, sans-serif;
+    
+            font-size: .5em;
+    
+    }
+    
+     
+    
+    H3 {
+    
+        font-family: Arial, sans-serif;
+    
+            font-size: 1.5em;
+    
+    }
+    
+     
+    
+    OL {
+    
+        font-family: Arial, sans-serif;
+    
+            font-size: .8em;
+    
+    }
+    
+     
+    
+    form.cmxform fieldset {
+    
+      margin-bottom: 10px;
+    
+    }
+    
+    form.cmxform legend {
+    
+      padding: 0 2px;
+    
+      font-weight: bold;
+    
+    }
+    
+    form.cmxform label {
+    
+      display: inline-block;
+    
+      line-height: 1.8;
+    
+      vertical-align: top;
+    
+    }
+    
+    form.cmxform fieldset ol {
+    
+      margin: 0;
+    
+      padding: 0;
+    
+    }
+    
+    form.cmxform fieldset li {
+    
+      list-style: none;
+    
+      padding: 5px;
+    
+      margin: 0;
+    
+    }
+    
+    form.cmxform fieldset fieldset {
+    
+      border: none;
+    
+      margin: 3px 0 0;
+    
+    }
+    
+    form.cmxform fieldset fieldset legend {
+    
+      padding: 0 0 5px;
+    
+      font-weight: normal;
+    
+    }
+    
+    form.cmxform fieldset fieldset label {
+    
+      display: block;
+    
+      width: auto;
+    
+    }
+    
+    form.cmxform em {
+    
+      font-weight: bold;
+    
+      font-style: normal;
+    
+      color: #f00;
+    
+    }
+    
+    form.cmxform label {
+    
+      width: 300px; /* Width of labels */
+    
+    }
+    
+    form.cmxform fieldset fieldset label {
+    
+      margin-left: 123px; /* Width plus 3 (html space) */
+    
+    }
+    
+    </style>
+    
+     
+    
+     
+    
+    <SCRIPT type=text/javascript>
+    
+    function show(showing)
+    
+            {
+    
+                   document.getElementById(showing).style.display="block";
+    
+            }
+    
+     
+    
+    function hide(hiding)
+    
+            {
+    
+                   document.getElementById(hiding).style.display="none";
+    
+            }
+    
+     
+    
+    //start ink
+    
+    function togglePart()
+    
+            {
+    
+                   show('verificationTypeSection');
+    
+            }
+    
+    function toggleToner()
+    
+            {
+    
+                   //alert("Warranty duration: " + document.getElementById('warrantyDuration').value);
+    
+                   show('WarrantySectionTONER');
+    
+                   if (parseInt(document.getElementById('warrantyDuration').value) !=0) {
+    
+                           document.getElementById('TONERwarrantyNote').innerHTML = "La duración de la garantía para la región seleccionada es de " + document.getElementById('warrantyDuration').value + " días desde la compra.";
+    
+                           show('POPSectionTONER');
+    
+                   }
+    
+                   else {
+    
+                           hide('POPSectionTONER');
+    
+                   }
+    
+                  
+    
+            }
+    
+    function toggleInkWarranty()
+    
+            {
+    
+                   hide('LMIsection');
+    
+                   hide('PÁGINA DE PRUEBAsection');
+    
+                   hide('POPsection');
+    
+                   hide('LMIsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('PÁGINA DE PRUEBAsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('POPsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('region_TONER')
+    
+                   hide('WarrantySectionTONER');
+    
+                   hide('POPSectionTONER');
+    
+                  
+    
+                   if ( f2.verificationType.value == "LMI" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                           show('LMIsection');
+    
+     
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "PÁGINA DE PRUEBA" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                           show('PÁGINA DE PRUEBAsection');
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "POP" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                           show('POPsection');
+    
+                   }
+    
+     
+    
+                   if ( f2.verificationType.value == "LMI" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                           show('LMIsectionCABEZAL DE IMPRESIÓN');
+    
+     
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "PÁGINA DE PRUEBA" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                           show('PÁGINA DE PRUEBAsectionCABEZAL DE IMPRESIÓN');
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "POP" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                           show('POPsectionCABEZAL DE IMPRESIÓN');
+    
+                   }             
+    
+                   if ( f2.verificationType.value == "LMI" && f2.partType.value == "TONER")
+    
+                   {
+    
+                           show('region_TONER');
+    
+     
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "PÁGINA DE PRUEBA" && f2.partType.value == "TONER")
+    
+                   {
+    
+                           show('region_TONER');
+    
+                   }
+    
+     
+    
+                   if (f2.verificationType.value == "POP" && f2.partType.value == "TONER")
+    
+                   {
+    
+                           show('region_TONER');
+    
+                   }
+    
+            }
+    
+           
+    
+           
+    
+    function resetInk()
+    
+            {
+    
+                   hide('LMIsection');
+    
+                   hide('PÁGINA DE PRUEBAsection');
+    
+                   hide('POPsection');
+    
+                   hide('LMIsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('PÁGINA DE PRUEBAsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('POPsectionCABEZAL DE IMPRESIÓN');
+    
+                   hide('region_TONER')
+    
+                   hide('WarrantySectionTONER');
+    
+                   hide('POPSectionTONER');
+    
+                   hide('Inkoutput');
+    
+                   hide('verificationTypeSection');
+    
+                   document.getElementById("f2").reset();
+    
+     
+    
+            }      
+    
+           
+    
+     
+    
+    function generateInk()
+    
+            {
+    
+           
+    
+                   var tempOutput = "";
+    
+                   var warranted = "";
+    
+                   tempOutput += "Part SKU: \t" + f2.partSKU.value + ";";
+    
+                   tempOutput += "\nTipo de verificación: \t";
+    
+     
+    
+    //verification type
+    
+     
+    
+                   if (f2.verificationType.value == "blank" || f2.partType.value == "blank" || f2.partSKU.value =="")
+    
+                   {
+    
+                           alert("You did not select a verification or part type or part number. All inputs are required. No data copied.");
+    
+                           return false;
+    
+                   }
+    
+     
+    
+                   else if (f2.verificationType.value == "LMI" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";               
+    
+                                  
+    
+                           if (document.getElementById('LMI_HPWarrVal').value == "blank" || document.getElementById('LMI_USEWarrVal').value == "blank" || document.getElementById('LMI_DEPLETEDWarrVal').value == "blank" || document.getElementById('LMI_WEDyear').value == "blank" || document.getElementById('LMI_WEDmonth').value == "blank" || document.getElementById('LMI_WEDday').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('LMI_HPWarrVal').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('LMI_USEWarrVal').value + ";";                     
+    
+                                   tempOutput += "\nAgotado: \t";
+    
+                                   tempOutput += document.getElementById('LMI_DEPLETEDWarrVal').value + ";"; 
+    
+                                   tempOutput += "\nWED: \t";
+    
+                                   tempOutput += document.getElementById('LMI_WEDyear').value + "/" + document.getElementById('LMI_WEDmonth').value + "/" + document.getElementById('LMI_WEDday').value + ";";
+    
+                                   tempOutput += "\n";
+    
+                                  
+    
+                                   //check WED
+    
+                                   var WED = new Date(document.getElementById('LMI_WEDyear').value, parseInt(document.getElementById('LMI_WEDmonth').value) - 1, parseInt(document.getElementById('LMI_WEDday').value) + 1);                
+    
+                                   var today = new Date();
+    
+                                   var WEDpassed = "";
+    
+           
+    
+                                   if (today >= WED)
+    
+                                   { WEDpassed = "SI"; }
+    
+                                   else
+    
+                                   { WEDpassed = "NO";}
+    
+                                  
+    
+                                  
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('LMI_HPWarrVal').value == "SI" && document.getElementById('LMI_USEWarrVal').value == "NO" && document.getElementById('LMI_DEPLETEDWarrVal').value == "NO" && WEDpassed == "NO")
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                          tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('LMI_HPWarrVal').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**no HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('LMI_USEWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**recargado";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                           if (document.getElementById('LMI_DEPLETEDWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**agotado";
+    
+                                                  tempOutput += " agotado";
+    
+                                                  }
+    
+                                          if (WEDpassed == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Producto Vencido";
+    
+                                                  tempOutput += " Producto Vencido";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+                                  
+    
+                           }
+    
+                   }
+    
+     
+    
+                   else if (f2.verificationType.value == "PÁGINA DE PRUEBA" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                  
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('TP_HPWarrVal').value == "blank" || document.getElementById('TP_USEWarrVal').value == "blank" || document.getElementById('TP_DEPLETEDWarrVal').value == "blank" || document.getElementById('TP_WEDyear').value == "blank" || document.getElementById('TP_WEDmonth').value == "blank" || document.getElementById('TP_WEDday').value == "blank" || document.getElementById('TP_whyNoLMI').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('TP_HPWarrVal').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('TP_USEWarrVal').value + ";";               
+    
+                                   tempOutput += "\nAgotado: \t";
+    
+                                   tempOutput += document.getElementById('TP_DEPLETEDWarrVal').value + ";";  
+    
+                                   tempOutput += "\nWED: \t";
+    
+                                   tempOutput += document.getElementById('TP_WEDyear').value + "/" + document.getElementById('TP_WEDmonth').value + "/" + document.getElementById('TP_WEDday').value + ";";
+    
+                                   tempOutput += "\nWhy no LMI: \t";
+    
+                                   tempOutput += document.getElementById('TP_whyNoLMI').value + ";";
+    
+                                   tempOutput += "\n";           
+    
+                                  
+    
+                                   //check WED
+    
+                                   var WED = new Date(document.getElementById('TP_WEDyear').value, parseInt(document.getElementById('TP_WEDmonth').value) - 1, parseInt(document.getElementById('TP_WEDday').value) + 1);                 
+    
+                                   var today = new Date();
+    
+                                   var WEDpassed = "";
+    
+     
+    
+                                  
+    
+                                   if (today >= WED)
+    
+                                   { WEDpassed = "SI"; }
+    
+                                  else
+    
+                                   { WEDpassed = "NO";}
+    
+                                  
+    
+                                  
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('TP_HPWarrVal').value == "SI" && document.getElementById('TP_USEWarrVal').value == "NO" && document.getElementById('TP_DEPLETEDWarrVal').value == "NO" && WEDpassed == "NO")
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                          tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('TP_HPWarrVal').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**no HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_USEWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**recargado";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_DEPLETEDWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**agotado";
+    
+                                                  tempOutput += " agotado";
+    
+                                                  }
+    
+                                          if (WEDpassed == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Producto Vencido";
+    
+                                                  tempOutput += " Producto Vencido";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+                                  
+    
+                           }
+    
+                   }             
+    
+     
+    
+                   else if (f2.verificationType.value == "POP" && f2.partType.value == "CARTUCHO")
+    
+                   {
+    
+                  
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('POP_HPWarrVal').value == "blank" || document.getElementById('POP_USEWarrVal').value == "blank" || document.getElementById('POP_DEPLETEDWarrVal').value == "blank" || document.getElementById('POP_WEDyear').value == "blank" || document.getElementById('POP_WEDmonth').value == "blank" || document.getElementById('POP_WEDday').value == "blank" || document.getElementById('POP_whyNoLMI').value == "blank" || document.getElementById('POP_whyNoTP').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('POP_HPWarrVal').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('POP_USEWarrVal').value + ";";                     
+    
+                                   tempOutput += "\nAgotado: \t";
+    
+                                   tempOutput += document.getElementById('POP_DEPLETEDWarrVal').value + ";"; 
+    
+                                   tempOutput += "\nWED: \t";
+    
+                                   tempOutput += document.getElementById('POP_WEDyear').value + "/" + document.getElementById('POP_WEDmonth').value + "/" + document.getElementById('POP_WEDday').value + ";";
+    
+                                   tempOutput += "\nWhy no LMI: \t";
+    
+                                   tempOutput += document.getElementById('POP_whyNoLMI').value + ";";
+    
+                                   tempOutput += "\nWhy no TP: \t";
+    
+                                   tempOutput += document.getElementById('POP_whyNoTP').value + ";";
+    
+                                   tempOutput += "\n";           
+    
+     
+    
+                                   //check WED
+    
+                                   var WED = new Date(document.getElementById('POP_WEDyear').value, parseInt(document.getElementById('POP_WEDmonth').value) - 1, parseInt(document.getElementById('POP_WEDday').value) + 1);                
+    
+                                   var today = new Date();
+    
+                                   var WEDpassed = "";
+    
+                                  
+    
+                                   if (today >= WED)
+    
+                                   { WEDpassed = "SI"; }
+    
+                                   else
+    
+                                   { WEDpassed = "NO";}                         
+    
+                                  
+    
+                                  
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('POP_HPWarrVal').value == "SI" && document.getElementById('POP_USEWarrVal').value == "NO" && document.getElementById('POP_DEPLETEDWarrVal').value == "NO" && WEDpassed == "NO")
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                          tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('POP_HPWarrVal').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**no HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_USEWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**recargado";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_DEPLETEDWarrVal').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**agotado";
+    
+                                                  tempOutput += " agotado";
+    
+                                                  }
+    
+                                          if (WEDpassed == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Producto Vencido";
+    
+                                                  tempOutput += " Producto Vencido";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+                                  
+    
+                           }
+    
+     
+    
+                   }             
+    
+     
+    
+    //START CABEZAL DE IMPRESIÓN SECTION
+    
+     
+    
+                   else if (f2.verificationType.value == "LMI" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('LMI_HPWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('LMI_USEWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('LMI_PHAWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('LMI_printerWarranty').value == "blank" || document.getElementById('LMI_PHA_SS').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('LMI_HPWarrValCABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('LMI_USEWarrValCABEZAL DE IMPRESIÓN').value + ";";                    
+    
+                                   tempOutput += "\nTinta que no es de HP en el cabezal de impresión: \t";
+    
+                                   tempOutput += document.getElementById('LMI_PHAWarrValCABEZAL DE IMPRESIÓN').value + ";";                          
+    
+                                   tempOutput += "\nImpresora en garantia: \t";
+    
+                                   tempOutput += document.getElementById('LMI_printerWarranty').value + ";";
+    
+                                   tempOutput += "\nSS: \t";
+    
+                                   tempOutput += document.getElementById('LMI_PHA_SS').value + ";";
+    
+                                   tempOutput += "\n";
+    
+                                  
+    
+                                  
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('LMI_HPWarrValCABEZAL DE IMPRESIÓN').value == "SI" && document.getElementById('LMI_USEWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('LMI_PHAWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('LMI_printerWarranty').value == "SI" && (document.getElementById('LMI_PHA_SS').value == "NO" || document.getElementById('LMI_PHA_SS').value == "NA"))
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                          tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('LMI_HPWarrValCABEZAL DE IMPRESIÓN').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n** No es Orginal HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('LMI_USEWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Dañado por tinta no rellenada (HP)";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                          if (document.getElementById('LMI_PHAWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**dañado por tinta que no es de HP en el cabezal de impresión";
+    
+                                                  tempOutput += " no hay tinta HP en el cabezal de impresión";
+    
+                                                  }
+    
+                                          if (document.getElementById('LMI_printerWarranty').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**fuera de garantía";
+    
+                                                  tempOutput += " fuera de garantía";
+    
+                                                  }
+    
+                                          if (document.getElementById('LMI_PHA_SS').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**utilizado con un suministro continuo de tinta";
+    
+                                                  tempOutput += " utilizado con un suministro continuo de tinta";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+     
+    
+                                  
+    
+                           }
+    
+                   }
+    
+     
+    
+                   else if (f2.verificationType.value == "PÁGINA DE PRUEBA" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                  
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('TP_HPWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('TP_USEWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('TP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('TP_printerWarranty').value == "blank" || document.getElementById('TP_whyNoLMICABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('TP_PHA_SS').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('TP_HPWarrValCABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('TP_USEWarrValCABEZAL DE IMPRESIÓN').value + ";";                     
+    
+                                   tempOutput += "\nTinta que no es de HP en el cabezal de impresión: \t";
+    
+                                   tempOutput += document.getElementById('TP_PHAWarrValCABEZAL DE IMPRESIÓN').value + ";";                          
+    
+                                   tempOutput += "\nimpresora en garantia: \t";
+    
+                                   tempOutput += document.getElementById('TP_printerWarranty').value + ";";
+    
+                                   tempOutput += "\nWhy no LMI: \t";
+    
+                                   tempOutput += document.getElementById('TP_whyNoLMICABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nSS: \t";     
+    
+                                   tempOutput += document.getElementById('TP_PHA_SS').value + ";";
+    
+                                   tempOutput += "\n";
+    
+                                  
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('TP_HPWarrValCABEZAL DE IMPRESIÓN').value == "SI" && document.getElementById('TP_USEWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('TP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('TP_printerWarranty').value == "SI" && (document.getElementById('TP_PHA_SS').value == "NO" || document.getElementById('TP_PHA_SS').value == "NA"))
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                          tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('TP_HPWarrValCABEZAL DE IMPRESIÓN').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**dañado por tinta no es HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_USEWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Dañado por tinta no rellenada (HP)";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**dañado por tinta que no es de HP en el cabezal de impresión";
+    
+                                                  tempOutput += " no hay tinta HP en el cabezal de impresión";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_printerWarranty').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**fuera de garantía";
+    
+                                                  tempOutput += " fuera de garantía";
+    
+                                                  }
+    
+                                          if (document.getElementById('TP_PHA_SS').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**utilizado con un suministro continuo de tinta";
+    
+                                                  tempOutput += " utilizado con un suministro continuo de tinta";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+                                  
+    
+                           }
+    
+                   }             
+    
+     
+    
+                   else if (f2.verificationType.value == "POP" && f2.partType.value == "CABEZAL DE IMPRESIÓN")
+    
+                   {
+    
+                  
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('POP_HPWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('POP_USEWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('POP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('POP_printerWarranty').value == "blank" || document.getElementById('POP_whyNoLMICABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('POP_whyNoTPCABEZAL DE IMPRESIÓN').value == "blank" || document.getElementById('POP_PHA_SS').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('POP_HPWarrValCABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nUSE: \t";
+    
+                                   tempOutput += document.getElementById('POP_USEWarrValCABEZAL DE IMPRESIÓN').value + ";";                    
+    
+                                   tempOutput += "\nTinta que no es de HP en el cabezal de impresión: \t";
+    
+                                   tempOutput += document.getElementById('POP_PHAWarrValCABEZAL DE IMPRESIÓN').value + ";";                          
+    
+                                   tempOutput += "\nimpresora en garantia: \t";
+    
+                                   tempOutput += document.getElementById('POP_printerWarranty').value + ";";
+    
+                                   tempOutput += "\nWhy no LMI: \t";
+    
+                                   tempOutput += document.getElementById('POP_whyNoLMICABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nWhy no TP: \t";
+    
+                                   tempOutput += document.getElementById('POP_whyNoTPCABEZAL DE IMPRESIÓN').value + ";";
+    
+                                   tempOutput += "\nSS: \t";     
+    
+                                   tempOutput += document.getElementById('POP_PHA_SS').value + ";";
+    
+                                   tempOutput += "\n";           
+    
+     
+    
+                          
+    
+                                   //check for warranty status
+    
+                                   if (document.getElementById('POP_HPWarrValCABEZAL DE IMPRESIÓN').value == "SI" && document.getElementById('POP_USEWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('POP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "NO" && document.getElementById('POP_printerWarranty').value == "SI" && document.getElementById('POP_PHA_SS').value == "NO")
+    
+                                   {
+    
+                                          warranted = "EN GARANTÍA";
+    
+                                           tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                   }
+    
+                                   else
+    
+                                   {
+    
+                                          warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                          tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                          if (document.getElementById('POP_HPWarrValCABEZAL DE IMPRESIÓN').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n** No es Orginal HP";
+    
+                                                  tempOutput += " no HP";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_USEWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**Dañado por tinta no rellenada (HP)";
+    
+                                                  tempOutput += " recargado";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_PHAWarrValCABEZAL DE IMPRESIÓN').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**dañado por tinta que no es de HP en el cabezal de impresión";
+    
+                                                  tempOutput += " no hay tinta HP en el cabezal de impresión";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_printerWarranty').value == "NO")
+    
+                                                  {
+    
+                                                  warranted += "\n**fuera de garantía";
+    
+                                                  tempOutput += " fuera de garantía";
+    
+                                                  }
+    
+                                          if (document.getElementById('POP_PHA_SS').value == "SI")
+    
+                                                  {
+    
+                                                  warranted += "\n**utilizado con un suministro continuo de tinta";
+    
+                                                  tempOutput += " utilizado con un suministro continuo de tinta";
+    
+                                                  }
+    
+                                          tempOutput += ";";
+    
+                                   }
+    
+     
+    
+                                  
+    
+                           }
+    
+     
+    
+                   }
+    
+     
+    
+    //START TONER SECTION
+    
+     
+    
+    else if (f2.partType.value == "TONER" && f2.verificationType.value == "POP" || f2.verificationType.value == "PÁGINA DE PRUEBA" || f2.verificationType.value == "LMI")
+    
+                   {
+    
+     
+    
+                           tempOutput += f2.verificationType.value + ";";
+    
+                           tempOutput += "\nTipo de parte: \t";
+    
+                           tempOutput += f2.partType.value + ";";
+    
+                           if (document.getElementById('TONER_HPWarrVal').value == "blank" || document.getElementById('TONER_agotado').value == "blank")
+    
+                           {
+    
+                                   alert("All inputs are required. No data copied.");
+    
+                                   return false;
+    
+                           }
+    
+                           else
+    
+                           {
+    
+                                   tempOutput += "\n\nHP: \t";
+    
+                                   tempOutput += document.getElementById('TONER_HPWarrVal').value + ";";
+    
+                                   tempOutput += "\nAgotado: \t";
+    
+                                   tempOutput += document.getElementById('TONER_agotado').value + ";";
+    
+                                  
+    
+                                   //the regions with warranty expiration have warrantyDuration values greater than 0
+    
+                                   if (parseInt(document.getElementById('warrantyDuration').value) !=0) {
+    
+                                          tempOutput += "\nFecha de compra: \t";
+    
+                                          tempOutput += document.getElementById('TONER_POPyear').value + "/" + document.getElementById('TONER_POPmonth').value + "/" + document.getElementById('TONER_POPday').value + ";";
+    
+                                          var today = new Date();
+    
+                                          //check interval since purchase
+    
+                                          //warrantyEndDate is Fecha de compra + warrantyDuration in days
+    
+                                          var purchaseDate = new Date(document.getElementById('TONER_POPyear').value, parseInt(document.getElementById('TONER_POPmonth').value) - 1, parseInt(document.getElementById('TONER_POPday').value) + 1);              
+    
+                                          if (purchaseDate > today){
+    
+                                                  alert("Choose a Fecha de compra before today.");
+    
+                                                  return false;
+    
+     
+    
+                                          }
+    
+                                          // milliseconds in a day 86400000
+    
+                                          var TONERwarrantyEndDate = new Date(purchaseDate.getTime() + 86400000*(parseInt(document.getElementById('warrantyDuration').value)));
+    
+                                          var WEDpassed = "NO";
+    
+                                  
+    
+                                          if (today >= TONERwarrantyEndDate)
+    
+                                          {
+    
+                                                  WEDpassed = "SI";
+    
+                                          }
+    
+     
+    
+                                          //alert("Today: " + today + "\nWarrantyEnd date " + TONERwarrantyEndDate + "\npurchaseDate.getTime " + purchaseDate.getTime() + "\ndurationCalc " + 86400000*parseInt(document.getElementById('warrantyDuration').value) + "\nWED passed " + WEDpassed);
+    
+     
+    
+     
+    
+                                          //check for warranty status
+    
+                                          if (document.getElementById('TONER_HPWarrVal').value == "SI" && document.getElementById('TONER_agotado').value == "NO" && WEDpassed =="NO")
+    
+                                          {
+    
+                                                  warranted = "EN GARANTÍA";
+    
+                                                  tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                          }
+    
+                                          else
+    
+                                          {
+    
+                                                  warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                                  tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                                  if (document.getElementById('TONER_HPWarrVal').value == "NO")
+    
+                                                         {
+    
+                                                         warranted += "\n**not an HP product";
+    
+                                                         tempOutput += " no HP";
+    
+                                                         }
+    
+                                                  if (document.getElementById('TONER_agotado').value == "SI")
+    
+                                                         {
+    
+                                                         warranted += "\n**agotado";
+    
+                                                         tempOutput += " agotado";
+    
+                                                         }
+    
+                                                  if (WEDpassed == "SI")
+    
+                                                         {
+    
+                                                         warranted += "\n**pasó de la fecha de la garantía";
+    
+                                                         tempOutput += "pasó de la fecha de la garantía";
+    
+                                                         }
+    
+                                                  tempOutput += ";";
+    
+                                          }
+    
+                                   }
+    
+                                   else //regions without warranty durations
+    
+                                   {
+    
+     
+    
+                                   if (document.getElementById('TONER_HPWarrVal').value == "SI" && document.getElementById('TONER_agotado').value == "NO")
+    
+                                          {
+    
+                                                  warranted = "EN GARANTÍA";
+    
+                                                  tempOutput += "\nEstado de la garantía: \tEN GARANTÍA;";
+    
+                                          }
+    
+                                          else
+    
+                                          {
+    
+                                                  warranted = "FUERA DE GARANTÍA *** HP NO reemplaza porque:\n";
+    
+                                                  tempOutput += "\nEstado de la garantía: \tFUERA DE GARANTÍA;\nRazones OOW: \t";
+    
+                                                  if (document.getElementById('TONER_HPWarrVal').value == "NO")
+    
+                                                         {
+    
+                                                         warranted += "\n**not an HP product";
+    
+                                                         tempOutput += " no HP";
+    
+                                                         }
+    
+                                                  if (document.getElementById('TONER_agotado').value == "SI")
+    
+                                                          {
+    
+                                                         warranted += "\n**agotado";
+    
+                                                         tempOutput += " agotado";
+    
+                                                         }
+    
+                                                  tempOutput += ";";
+    
+                                          }
+    
+     
+    
+                                   }
+    
+     
+    
+     
+    
+                           }
+    
+                   }
+    
+     
+    
+                   alert(warranted);
+    
+                   //document.getElementById('Inkoutput').innerHTML = tempOutput;
+    
+                   document.getElementById('Inkoutput').value = tempOutput; // experiment to fill the clipboard with formatted text
+    
+                   show('Inkoutput');
+    
+                   copyInk('Inkoutput');
+    
+     
+    
+            }// End generate
+    
+     
+    
+    function copyInk(output)
+    
+            {
+    
+                   var content = document.getElementById(output);
+    
+                   content.select();
+    
+                   document.execCommand('copy');
+    
+     
+    
+     
+    
+                   //range = content.createTextRange();
+    
+                   //range.execCommand("Copy");
+    
+                   //content.style.whiteSpace="pre-wrap";
+    
+            }
+    
+           
+    
+     
+    
+           
+    
+     
+    
+    // end ink
+    
+     
+    
+     
+    
+     
+    
+    </SCRIPT>
+    
+     
+    
+    <META name=GENERATOR content="MSHTML 9.00.8112.16584"></HEAD>
+    
+    <BODY>
+       </script>
+    <div style="text-align: center;">
+        <img src="data:image/png;base64,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" alt="data:image/png;base64,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">
+    </div>
+    <FORM action="#" class="cmxform" id="f2" name=f2>
+    <center>
+    <H3>Plantilla de garantía de tinta y tóner HP</H3>
+    <h6>
+       
+        <script>
+                
+                // ********** cambia aquí
+                var text = "Juæn" // tu texto
+                var speed = 100 // velocidad de movimiento 
+    
+    
+                if (document.all || document.getElementById) {
+                    document.write('<span id="highlight">' + text + '</span>')
+                    var storetext = document.getElementById ? document.getElementById("highlight") : document.all.highlight
+                } else
+                    document.write(text)
+                var hex = new Array("00", "14", "28", "3C", "50", "64", "78", "8C", "A0", "B4", "C8", "DC", "F0")
+                var r = 1
+                var g = 1
+                var b = 1
+                var seq = 1
+    
+                function changetext() {
+                    rainbow = "#" + hex[r] + hex[g] + hex[b]
+                    storetext.style.color = rainbow
+                }
+    
+                function change() {
+                    if (seq == 6) {
+                        b--
+                        if (b == 0)
+                            seq = 1
+                    }
+                    if (seq == 5) {
+                        r++
+                        if (r == 12)
+                            seq = 6
+                    }
+                    if (seq == 4) {
+                        g--
+                        if (g == 0)
+                            seq = 5
+                    }
+                    if (seq == 3) {
+                        b++
+                        if (b == 12)
+                            seq = 4
+                    }
+                    if (seq == 2) {
+                        r--
+                        if (r == 0)
+                            seq = 3
+                    }
+                    if (seq == 1) {
+                        g++
+                        if (g == 12)
+                            seq = 2
+                    }
+                    changetext()
+                }
+    
+                function starteffect() {
+                    if (document.all || document.getElementById)
+                        flash = setInterval("change()", speed)
+                }
+                starteffect();
+                </script>
+            
+    </h6>
+    </center>
+    <p>Todos los campos son Necesarios<em>*</em></p>
+    
+    <p>Si estas sustituyendo varias piezas, ejecuta este modelo para cada pieza que se sustituira.</p>
+    
+    <INPUT style="CURSOR: pointer" id=b3 title="WARNING THIS WILL CLEAR EVERYTHING!" onclick=resetInk() name=clear value=" Borrar " type=button><I>&nbsp;***Olvidar todo!***</I>
+    
+    <p>
+    
+    <fieldset>
+
+        <center>
+            <legend>Numero de parte y Metodo de Obtención</legend>
+            
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="partSKU">Numero de Parte(PN):<em>*</em></label>
+    
+                   <input type="text" name="partSKU" placeholder="M051A">
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="partType">Tipo de Parte:<em>*</em></label>
+                   
+    
+                   <SELECT id=partType onchange=togglePart() name=partType>
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="CARTUCHO">Cartucho de Tinta</OPTION>
+    
+                           <OPTION value="CABEZAL DE IMPRESIÓN">CABEZAL DE IMPRESIÓN</OPTION>
+    
+                           <OPTION value="TONER">TONER</OPTION>
+                        </center>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                  
+    
+                   <li style="DISPLAY: none" id="verificationTypeSection" name="verificationTypeSection">
+    
+                   <label for="verificationType">Metodo de obtencion:<em>*</em></label>
+    
+                   <SELECT id=verificationType onchange=toggleInkWarranty() name=verificationType>
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="LMI">LMI (Agente verifico directamente)</OPTION>
+    
+                           <OPTION value="PÁGINA DE PRUEBA">PÁGINA DE PRUEBA (el cliente lee los valores del informe al agente)</OPTION>
+    
+                           <OPTION value="POP">POP (información general reportada por el cliente)</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+     
+    
+    <DIV style="DISPLAY: none" id="region_TONER" name="region_TONER">
+    
+                   <fieldset>
+    
+                           <legend>Region</legend>
+    
+                           <ol>
+    
+                                   <li>
+    
+                                          <label for="warrantyDuration">Region:<em>*</em></label>
+    
+                                          <SELECT id="warrantyDuration" onchange=toggleToner() name="warrantyDuration">
+    
+                                                  <OPTION selected value="blank"></OPTION>
+    
+                                                  <OPTION value="0">North America</OPTION>
+    
+                                                  <OPTION value="0">Europe and Middle East</OPTION>
+    
+                                                  <OPTION value="1095">Asia-Pacific - China</OPTION>
+    
+                                                  <OPTION value="365">Asia-Pacific - Korea</OPTION>
+    
+                                                  <OPTION value="730">Asia-Pacific - Otro</OPTION>
+    
+                                                  <OPTION value="180">Latin America - Argentina</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Bolivia</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Brazil</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Central America and Caribbean</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Chile</OPTION>
+    
+                                                  <OPTION value="360">Latin America - Columbia</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Ecuador</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Mexico</OPTION>
+    
+                                                  <OPTION value="180">Latin America - Paraguay</OPTION>
+    
+                                                  <OPTION value="180">Latin America - Peru</OPTION>
+    
+                                                  <OPTION value="180">Latin America - Uruguay</OPTION>
+    
+                                                  <OPTION value="90">Latin America - Venezuela</OPTION>
+    
+                                          </SELECT>
+    
+                                   </li>
+    
+                   </DIV>
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="LMIsection" name="LMIsection">
+    
+    <fieldset>
+    
+            <legend>LMI</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="LMI_HPWarrVal">¿Suministro de tinta HP original?<em>*</em></label>
+    
+                   <SELECT id="LMI_HPWarrVal" name="LMI_HPWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_USEWarrVal">Recarregado/Remanufaturado? (USE = 1):<em>*</em></label>
+    
+                   <SELECT id="LMI_USEWarrVal" name="LMI_USEWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="LMI_DEPLETEDWarrVal">Valor LOI (¿Vacío?):<em>*</em></label>
+    
+                   <SELECT id="LMI_DEPLETEDWarrVal" name="LMI_DEPLETEDWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    <fieldset>
+    
+            <legend>Fecha EOW de tinta (AAAAMMDD)</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="LMI_WEDyear">Año:<em>*</em></label>
+    
+                   <SELECT id="LMI_WEDyear" name="LMI_WEDyear">
+    
+                           <OPTION selected value="blank"></option>
+                        
+                           <OPTION value="2020">2020</option>
+    
+                           <OPTION value="2021">2021</option>
+    
+                           <OPTION value="2022">2022</option>
+    
+                           <OPTION value="2023">2023</option>
+    
+                           <OPTION value="2024">2024</option>
+    
+                           <OPTION value="2025">2025</option>
+    
+                           <OPTION value="2026">2026</option>
+
+                           <OPTION value="2027">2027</option>
+    
+                           <OPTION value="2028">2028</option>
+     
+                           <OPTION value="2029">2029</option>
+     
+                           <OPTION value="2030">2030</option>
+     
+                           <OPTION value="2031">2031</option>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_WEDmonth">Mes:<em>*</em></label>
+    
+                   <SELECT id="LMI_WEDmonth" name="LMI_WEDmonth">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_WEDday">Día (si no hay valor DD, elija el último día del mes):<em>*</em></label>
+    
+                   <SELECT id="LMI_WEDday" name="LMI_WEDday">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                           <OPTION value="13">13</option>
+    
+                           <OPTION value="14">14</option>
+    
+                           <OPTION value="15">15</option>
+    
+                           <OPTION value="16">16</option>
+    
+                           <OPTION value="17">17</option>
+    
+                           <OPTION value="18">18</option>
+    
+                           <OPTION value="19">19</option>
+    
+                           <OPTION value="20">20</option>
+    
+                           <OPTION value="21">21</option>
+    
+                           <OPTION value="22">22</option>
+    
+                           <OPTION value="23">23</option>
+    
+                           <OPTION value="24">24</option>
+    
+                           <OPTION value="25">25</option>
+    
+                           <OPTION value="26">26</option>
+    
+                           <OPTION value="27">27</option>
+    
+                           <OPTION value="28">28</option>
+    
+                           <OPTION value="29">29</option>
+    
+                           <OPTION value="30">30</option>
+    
+                           <OPTION value="31">31</option>
+    
+                   </SELECT>
+    
+                   </li>                 
+    
+                   </ol>
+    
+    </fieldset>
+    
+     
+    
+    </DIV>
+    
+     
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="LMIsectionCABEZAL DE IMPRESIÓN" name="LMIsectionCABEZAL DE IMPRESIÓN">
+    
+    <fieldset>
+    
+            <legend>LMI</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="LMI_HPWarrValCABEZAL DE IMPRESIÓN">¿TODOS LOS CARTUCHOS HP genuinos? (HP = 1):<em>*</em></label>
+    
+                   <SELECT id="LMI_HPWarrValCABEZAL DE IMPRESIÓN" name="LMI_HPWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_USEWarrValCABEZAL DE IMPRESIÓN">¿ALGUNOS CARTUCHOS recargados?  (USO = 1):<em>*</em></label>
+    
+                   <SELECT id="LMI_USEWarrValCABEZAL DE IMPRESIÓN" name="LMI_USEWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="LMI_PHAWarrValCABEZAL DE IMPRESIÓN">¿Tinta que no es de HP en el cabezal de impresión anteriormente?:<em>*</em></label>
+    
+                   <SELECT id="LMI_PHAWarrValCABEZAL DE IMPRESIÓN" name="LMI_PHAWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_printerWarranty">¿Impresora/cabezal de impresión en garantía?:<em>*</em></label>
+    
+                   <SELECT id="LMI_printerWarranty" name="LMI_printerWarranty">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="LMI_PHA_SS">valor SS?  (puede que no aparezca):<em>*</em></label>
+    
+                   <SELECT id="LMI_PHA_SS" name="LMI_PHA_SS">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">1</OPTION>
+    
+                           <OPTION value="NO">0</OPTION>
+    
+                           <OPTION value="NA">No Aparece</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    </DIV>
+    
+     
+    
+    <DIV style="DISPLAY: none" id="WarrantySectionTONER" name="WarrantySectionTONER">
+    
+    <fieldset>
+    
+                   <legend>Garantía de tóner</legend>
+    
+                   <ol>
+    
+                           <li>
+    
+                           <label for="TONER_HPWarrVal">HP original? (La página de estado muestra NORMAL):<em>*</em></label>
+    
+                           <SELECT id="TONER_HPWarrVal" name="TONER_HPWarrVal">
+    
+                                   <OPTION selected value="blank"></OPTION>
+    
+                                   <OPTION value="SI">SI</OPTION>
+    
+                                   <OPTION value="NO">NO</OPTION>
+    
+                           </SELECT>
+    
+                           </li>
+    
+                           <li>
+    
+                           <label for="TONER_agotado">Agotado? (Bajo o Muy bajo: verifique el punto de activación de la garantía en el EWS/Guía del usuario/documento de capacitación):<em>*</em></label>
+    
+                           <SELECT id="TONER_agotado" name="LTONER_agotado">
+    
+                                   <OPTION selected value="blank"></OPTION>
+    
+                                   <OPTION value="SI">SI</OPTION>
+    
+                                   <OPTION value="NO">NO</OPTION>
+    
+                           </SELECT>
+    
+                           </li>  
+    
+    </fieldset>
+    
+    </DIV>
+    
+     
+    
+    <DIV style="DISPLAY: none" id="POPSectionTONER" name="POPSectionTONER">
+    
+    <fieldset>
+    
+                   <legend>Fecha de compra (AAAAMMDD)</legend>
+    
+                   <p>En APJ se puede usar fecha de fabricación + 2 años, si no hay comprobante de compra.</p>
+    
+                   <p id="TONERwarrantyNote"></p>
+    
+                   <ol>
+    
+                           <li>
+    
+                           <label for="TONER_POPyear">Año:<em>*</em></label>
+    
+                           <SELECT id="TONER_POPyear" name="TONER_POPyear">
+    
+                                   <OPTION selected value="blank"></option>
+    
+                                    <OPTION value="2020">2020</option>
+    
+                                        <OPTION value="2021">2021</option>
+                 
+                                        <OPTION value="2022">2022</option>
+                 
+                                        <OPTION value="2023">2023</option>
+                 
+                                        <OPTION value="2024">2024</option>
+                 
+                                        <OPTION value="2025">2025</option>
+                 
+                                        <OPTION value="2026">2026</option>
+             
+                                        <OPTION value="2027">2027</option>
+                 
+                                        <OPTION value="2028">2028</option>
+                  
+                                        <OPTION value="2029">2029</option>
+                  
+                                        <OPTION value="2030">2030</option>
+                  
+                                        <OPTION value="2031">2031</option>
+                           </SELECT>
+    
+                           </li>
+    
+                           <li>
+    
+                           <label for="TONER_POPmonth">Mes:<em>*</em></label>
+    
+                           <SELECT id="TONER_POPmonth" name="TONER_POPmonth">
+    
+                                   <OPTION selected value="blank"></option>
+    
+                                   <OPTION value="1">01</option>
+    
+                                   <OPTION value="2">02</option>
+    
+                                   <OPTION value="3">03</option>
+    
+                                   <OPTION value="4">04</option>
+    
+                                   <OPTION value="5">05</option>
+    
+                                   <OPTION value="6">06</option>
+    
+                                   <OPTION value="7">07</option>
+    
+                                   <OPTION value="8">08</option>
+    
+                                   <OPTION value="9">09</option>
+    
+                                   <OPTION value="10">10</option>
+    
+                                   <OPTION value="11">11</option>
+    
+                                   <OPTION value="12">12</option>
+    
+                           </SELECT>
+    
+                           </li>
+    
+                           <li>
+    
+                           <label for="TONER_POPday">Día (si no hay valor DD, elija el último día del mes):<em>*</em></label>
+    
+                           <SELECT id="TONER_POPday" name="TONER_POPday">
+    
+                                   <OPTION selected value="blank"></option>
+    
+                                   <OPTION value="1">01</option>
+    
+                                   <OPTION value="2">02</option>
+    
+                                   <OPTION value="3">03</option>
+    
+                                   <OPTION value="4">04</option>
+    
+                                   <OPTION value="5">05</option>
+    
+                                   <OPTION value="6">06</option>
+    
+                                   <OPTION value="7">07</option>
+    
+                                   <OPTION value="8">08</option>
+    
+                                   <OPTION value="9">09</option>
+    
+                                   <OPTION value="10">10</option>
+    
+                                   <OPTION value="11">11</option>
+    
+                                   <OPTION value="12">12</option>
+    
+                                   <OPTION value="13">13</option>
+    
+                                   <OPTION value="14">14</option>
+    
+                                   <OPTION value="15">15</option>
+    
+                                   <OPTION value="16">16</option>
+    
+                                   <OPTION value="17">17</option>
+    
+                                   <OPTION value="18">18</option>
+    
+                                   <OPTION value="19">19</option>
+    
+                                   <OPTION value="20">20</option>
+    
+                                   <OPTION value="21">21</option>
+    
+                                   <OPTION value="22">22</option>
+    
+                                   <OPTION value="23">23</option>
+    
+                                   <OPTION value="24">24</option>
+    
+                                   <OPTION value="25">25</option>
+    
+                                   <OPTION value="26">26</option>
+    
+                                   <OPTION value="27">27</option>
+    
+                                   <OPTION value="28">28</option>
+    
+                                   <OPTION value="29">29</option>
+    
+                                   <OPTION value="30">30</option>
+    
+                                   <OPTION value="31">31</option>
+    
+                           </SELECT>
+    
+                           </li>                 
+    
+                           </ol>
+    
+            </fieldset>
+    
+    </DIV>
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="PÁGINA DE PRUEBAsection" name="PÁGINA DE PRUEBAsection">
+    
+    <fieldset>
+    
+            <legend>PÁGINA DE PRUEBA</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="TP_whyNoLMI">¿Por qué no se usó LMI?:<em>*</em></label>
+    
+                   <SELECT id="TP_whyNoLMI" name="TP_whyNoLMI">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoInternet">Sin internet</OPTION>
+    
+                           <OPTION value="NoConnect">Falla de conexión</OPTION>
+    
+                           <OPTION value="NoDownload">Falla al descargar e instalar</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_HPWarrVal">¿Suministro de tinta HP original?<em>*</em></label>
+    
+                   <SELECT id="TP_HPWarrVal" name="TP_HPWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_USEWarrVal">¿Recargado/Remanufacturado?(USE = 1):<em>*</em></label>
+    
+                   <SELECT id="TP_USEWarrVal" name="TP_USEWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="TP_DEPLETEDWarrVal">Valor LOI (¿Vacío?):<em>*</em></label>
+    
+                   <SELECT id="TP_DEPLETEDWarrVal" name="TP_DEPLETEDWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    <fieldset>
+    
+            <legend>Fecha EOW de tinta (AAAAMMDD)</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="TP_WEDyear">Año:<em>*</em></label>
+    
+                   <SELECT id="TP_WEDyear" name="TP_WEDyear">
+    
+                           <OPTION selected value="blank"></option>
+    
+                            <OPTION value="2020">2020</option>
+    
+                                <OPTION value="2021">2021</option>
+         
+                                <OPTION value="2022">2022</option>
+         
+                                <OPTION value="2023">2023</option>
+         
+                                <OPTION value="2024">2024</option>
+         
+                                <OPTION value="2025">2025</option>
+         
+                                <OPTION value="2026">2026</option>
+     
+                                <OPTION value="2027">2027</option>
+         
+                                <OPTION value="2028">2028</option>
+          
+                                <OPTION value="2029">2029</option>
+          
+                                <OPTION value="2030">2030</option>
+          
+                                <OPTION value="2031">2031</option>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_WEDmonth">Mes:<em>*</em></label>
+    
+                   <SELECT id="TP_WEDmonth" name="TP_WEDmonth">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_WEDday">Día (si no hay valor DD, elija el último día del mes):<em>*</em></label>
+    
+                   <SELECT id="TP_WEDday" name="TP_WEDday">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                           <OPTION value="13">13</option>
+    
+                           <OPTION value="14">14</option>
+    
+                           <OPTION value="15">15</option>
+    
+                           <OPTION value="16">16</option>
+    
+                           <OPTION value="17">17</option>
+    
+                           <OPTION value="18">18</option>
+    
+                           <OPTION value="19">19</option>
+    
+                           <OPTION value="20">20</option>
+    
+                           <OPTION value="21">21</option>
+    
+                           <OPTION value="22">22</option>
+    
+                           <OPTION value="23">23</option>
+    
+                           <OPTION value="24">24</option>
+    
+                           <OPTION value="25">25</option>
+    
+                           <OPTION value="26">26</option>
+    
+                           <OPTION value="27">27</option>
+    
+                           <OPTION value="28">28</option>
+    
+                           <OPTION value="29">29</option>
+    
+                           <OPTION value="30">30</option>
+    
+                           <OPTION value="31">31</option>
+    
+                   </SELECT>
+    
+                   </li>                 
+    
+                   </ol>
+    
+    </fieldset>
+    
+     
+    
+    </DIV>
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="PÁGINA DE PRUEBAsectionCABEZAL DE IMPRESIÓN" name="PÁGINA DE PRUEBAsectionCABEZAL DE IMPRESIÓN">
+    
+    <fieldset>
+    
+            <legend>PÁGINA DE PRUEBA</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="TP_whyNoLMICABEZAL DE IMPRESIÓN">¿Por qué no se usó LMI?:<em>*</em></label>
+    
+                   <SELECT id="TP_whyNoLMICABEZAL DE IMPRESIÓN" name="TP_whyNoLMICABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoInternet">Sin internet</OPTION>
+    
+                           <OPTION value="NoConnect">Falla de conexión</OPTION>
+    
+                           <OPTION value="NoDownload">Falla al descargar e instalar</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_HPWarrValCABEZAL DE IMPRESIÓN">TODOS OS CARTUCHOS originais HP? (HP = 1):<em>*</em></label>
+    
+                   <SELECT id="TP_HPWarrValCABEZAL DE IMPRESIÓN" name="TP_HPWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_USEWarrValCABEZAL DE IMPRESIÓN">¿ALGUNOS CARTUCHOS recargados?  (USO = 1):<em>*</em></label>
+    
+                   <SELECT id="TP_USEWarrValCABEZAL DE IMPRESIÓN" name="TP_USEWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="TP_PHAWarrValCABEZAL DE IMPRESIÓN">¿Tinta que no es de HP en el cabezal de impresión anteriormente?:<em>*</em></label>
+    
+                   <SELECT id="TP_PHAWarrValCABEZAL DE IMPRESIÓN" name="TP_PHAWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_printerWarranty">¿Impresora/cabezal de impresión en garantía?:<em>*</em></label>
+    
+                   <SELECT id="TP_printerWarranty" name="TP_printerWarranty">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="TP_PHA_SS">valor SS?  (puede que no aparezca):<em>*</em></label>
+    
+                   <SELECT id="TP_PHA_SS" name="TP_PHA_SS">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">1</OPTION>
+    
+                           <OPTION value="NO">0</OPTION>
+    
+                           <OPTION value="NA">No Aparece</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    </DIV>
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="POPsection" name="POPsection">
+    
+    <fieldset>
+    
+            <legend>POP</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="POP_whyNoLMI">¿Por qué no se usó LMI?:<em>*</em></label>
+    
+                   <SELECT id="POP_whyNoLMI" name="POP_whyNoLMI">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoInternet">Sin internet</OPTION>
+    
+                           <OPTION value="NoConnect">Falla de conexión</OPTION>
+    
+                           <OPTION value="NoDownload">Falla al descargar e instalar</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_whyNoTP">¿Por qué no se utilizó una página de prueba?:<em>*</em></label>
+    
+                   <SELECT id="POP_whyNoTP" name="POP_whyNoTP">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoPrint">La impresora no generaba la página.</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_HPWarrVal">Suministro de tinta HP original (¿la etiqueta del cartucho dice 'HP')?::<em>*</em></label>
+    
+                   <SELECT id="POP_HPWarrVal" name="POP_HPWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_USEWarrVal">¿Se recargó el cartucho?:<em>*</em></label>
+    
+                   <SELECT id="POP_USEWarrVal" name="POP_USEWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="POP_DEPLETEDWarrVal">¿Has impreso mucho con este cartucho? ¿Podría estar vacío?:<em>*</em></label>
+    
+                   <SELECT id="POP_DEPLETEDWarrVal" name="POP_DEPLETEDWarrVal">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    <fieldset>
+    
+            <legend>Fecha EOW de tinta (AAAAMMDD)</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="POP_WEDyear">Año:<em>*</em></label>
+    
+                   <SELECT id="POP_WEDyear" name="POP_WEDyear">
+    
+                           <OPTION selected value="blank"></option>
+    
+                            <OPTION value="2020">2020</option>
+    
+                                <OPTION value="2021">2021</option>
+         
+                                <OPTION value="2022">2022</option>
+         
+                                <OPTION value="2023">2023</option>
+         
+                                <OPTION value="2024">2024</option>
+         
+                                <OPTION value="2025">2025</option>
+         
+                                <OPTION value="2026">2026</option>
+     
+                                <OPTION value="2027">2027</option>
+         
+                                <OPTION value="2028">2028</option>
+          
+                                <OPTION value="2029">2029</option>
+          
+                                <OPTION value="2030">2030</option>
+          
+                                <OPTION value="2031">2031</option>
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_WEDmonth">Mes:<em>*</em></label>
+    
+                   <SELECT id="POP_WEDmonth" name="POP_WEDmonth">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_WEDday">Día (si no hay valor DD, elija el último día del mes):<em>*</em></label>
+    
+                   <SELECT id="POP_WEDday" name="POP_WEDday">
+    
+                           <OPTION selected value="blank"></option>
+    
+                           <OPTION value="1">01</option>
+    
+                           <OPTION value="2">02</option>
+    
+                           <OPTION value="3">03</option>
+    
+                           <OPTION value="4">04</option>
+    
+                           <OPTION value="5">05</option>
+    
+                           <OPTION value="6">06</option>
+    
+                           <OPTION value="7">07</option>
+    
+                           <OPTION value="8">08</option>
+    
+                           <OPTION value="9">09</option>
+    
+                           <OPTION value="10">10</option>
+    
+                           <OPTION value="11">11</option>
+    
+                           <OPTION value="12">12</option>
+    
+                           <OPTION value="13">13</option>
+    
+                           <OPTION value="14">14</option>
+    
+                           <OPTION value="15">15</option>
+    
+                           <OPTION value="16">16</option>
+    
+                           <OPTION value="17">17</option>
+    
+                           <OPTION value="18">18</option>
+    
+                           <OPTION value="19">19</option>
+    
+                           <OPTION value="20">20</option>
+    
+                           <OPTION value="21">21</option>
+    
+                           <OPTION value="22">22</option>
+    
+                           <OPTION value="23">23</option>
+    
+                           <OPTION value="24">24</option>
+    
+                           <OPTION value="25">25</option>
+    
+                           <OPTION value="26">26</option>
+    
+                           <OPTION value="27">27</option>
+    
+                           <OPTION value="28">28</option>
+    
+                           <OPTION value="29">29</option>
+    
+                           <OPTION value="30">30</option>
+    
+                           <OPTION value="31">31</option>
+    
+                   </SELECT>
+    
+                   </li>                 
+    
+                   </ol>
+    
+    </fieldset>
+    
+    </DIV>
+    
+     
+    
+     
+    
+     
+    
+     
+    
+    <DIV style="DISPLAY: none" id="POPsectionCABEZAL DE IMPRESIÓN" name="POPsectionCABEZAL DE IMPRESIÓN">
+    
+    <fieldset>
+    
+            <legend>POP</legend>
+    
+            <ol>
+    
+                   <li>
+    
+                   <label for="POP_whyNoLMICABEZAL DE IMPRESIÓN">¿Por qué no se usó LMI?:<em>*</em></label>
+    
+                   <SELECT id="POP_whyNoLMICABEZAL DE IMPRESIÓN" name="POP_whyNoLMICABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoInternet">Sin internet</OPTION>
+    
+                           <OPTION value="NoConnect">Falla de conexión</OPTION>
+    
+                           <OPTION value="NoDownload">Falla al descargar e instalar</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                    <li>
+    
+                   <label for="POP_whyNoTPCABEZAL DE IMPRESIÓN">¿Por qué no se utilizó una página de prueba?:<em>*</em></label>
+    
+                   <SELECT id="POP_whyNoTPCABEZAL DE IMPRESIÓN" name="POP_whyNoTPCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="NoPrint">La impresora no generaba la página</OPTION>
+    
+                           <OPTION value="ClienteSeNego">Cliente se negó</OPTION>
+    
+                           <OPTION value="Otro">Otro</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_HPWarrValCABEZAL DE IMPRESIÓN">TODOS los cartuchos Suministros de tinta HP originales (¿La etiqueta del cartucho dice 'HP')?:<em>*</em></label>
+    
+                   <SELECT id="POP_HPWarrValCABEZAL DE IMPRESIÓN" name="POP_HPWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_USEWarrValCABEZAL DE IMPRESIÓN">¿ALGUNOS cartuchos recargados?:<em>*</em></label>
+    
+                   <SELECT id="POP_USEWarrValCABEZAL DE IMPRESIÓN" name="POP_USEWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>         
+    
+                   <li>
+    
+                   <label for="POP_PHAWarrValCABEZAL DE IMPRESIÓN">¿Ha utilizado alguna vez tinta que no sea de HP en esta impresora?:<em>*</em></label>
+    
+                   <SELECT id="POP_PHAWarrValCABEZAL DE IMPRESIÓN" name="POP_PHAWarrValCABEZAL DE IMPRESIÓN">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_printerWarranty">¿Impresora/cabezal de impresión en garantía?:<em>*</em></label>
+    
+                   <SELECT id="POP_printerWarranty" name="POP_printerWarranty">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+                   <li>
+    
+                   <label for="POP_PHA_SS">¿Alguna vez se instaló un sistema de tinta continua?:<em>*</em></label>
+    
+                   <SELECT id="POP_PHA_SS" name="POP_PHA_SS">
+    
+                           <OPTION selected value="blank"></OPTION>
+    
+                           <OPTION value="SI">SI</OPTION>
+    
+                           <OPTION value="NO">NO</OPTION>
+    
+                   </SELECT>
+    
+                   </li>
+    
+            </ol>
+    
+    </fieldset>
+    
+    </DIV>
+    
+     
+    
+    <BR>
+    
+    <INPUT style="CURSOR: pointer" id="InkNotesGen" onclick=generateInk() value="Consultar garantía / Generar notas" type=button>
+    
+    <BR><BR>
+    
+     
+    
+    <TEXTAREA type="text" style="DISPLAY: none" id="Inkoutput" name="Inkoutput" rows="15" cols="50"></TEXTAREA>
+    
+    <p class=footnote>Ink and toner template version Juæn v1.1 12/06/2022
+    
+    </FORM>
+    
+    </BODY>
+</HTML>
